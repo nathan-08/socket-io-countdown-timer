@@ -36,8 +36,3 @@ io.on('connection', function (client) {
         console.log('disconnected')
     })
 })
-
-// joseph Ells @ 2pm BC unknown
-// Charles Hatch @ 2:30 BC complete
-// Todd Gore @ 3 BC unknown
-// Jose Ortiz @ 4:30 BC unknown
