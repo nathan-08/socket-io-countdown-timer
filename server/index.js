@@ -2,11 +2,10 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 app.use(bodyParser.json())
-const server = require('http').Server(app)
-const io = require('socket.io')(server)
+const socket = require('socket.io')
 
-
-server.listen(4000, () => console.log('listening on 4000'))
+app.get('/api/checkapi', (req, res) => { res.send('connected!') })
+const io = socket(app.listen(4000, () => console.log('listening on 4000')));
 
 var countdown = 1000;
 var counting = true;
